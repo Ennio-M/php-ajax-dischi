@@ -1,0 +1,17 @@
+header{
+    background-color: #2E3A46;
+}
+header img{
+    width: 50px;
+}
+main{
+    background-color: #1E2D3B;
+    padding-bottom: 50px;
+    min-height: calc(100% - 82px);
+}
+.card{
+    background-color: #2E3A46;
+}
+.card-body p{
+    color: gray;
+}
