@@ -18,6 +18,18 @@
         </header>
         <main>
             <div class="container">
+                <div class="input-group py-3">
+                    <p class="text-white m-0">Seleziona un genere</p>
+                    <select name="genres" id="genres" v-model="selectedGenre" @change="search()" class="mx-3 p-2 rounded-3">
+                        <option value="">Tutti</option>
+                        <option :value="genre" v-for="(genre, index) in genres" :key="index">{{genre}}</option>
+                    </select>
+                    <!-- <p class="text-white m-0">Seleziona un artista</p>
+                    <select name="authors" id="authors" v-model="selectedAuthor" @change="searchAuthor()" class="mx-3 p-2 rounded-3">
+                        <option value="">Tutti</option>
+                        <option :value="author" v-for="(author, index) in authors" :key="index">{{author}}</option>
+                    </select> -->
+                </div>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 gy-3">
                     <div v-for="(album, index) in albums" :key="index" class="col">
                         <div class="card h-100">
